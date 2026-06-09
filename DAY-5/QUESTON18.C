@@ -1,7 +1,5 @@
 //Write a program to Check strong number
 #include <stdio.h>
-
-// Function to calculate factorial of a number
 int factorial(int num) {
     int fact = 1;
     for (int i = 1; i <= num; i++) {
@@ -13,20 +11,20 @@ int factorial(int num) {
 int main() {
     int number, temp, digit, sum = 0;
 
-    // Ask the user for a number
+    
     printf("Enter a number: ");
     scanf("%d", &number);
 
-    temp = number;  // store original number for later comparison
+    temp = number;  
 
-    // Break the number into digits and calculate sum of factorials
+    
     while (temp > 0) {
-        digit = temp % 10;              // extract last digit
-        sum += factorial(digit);        // add factorial of digit to sum
-        temp /= 10;                     // remove last digit
+        digit = temp % 10;              
+        sum += factorial(digit);        
+        temp /= 10;                     
     }
 
-    // Check if sum of factorials equals the original number
+    
     if (sum == number) {
         printf("%d is a Strong Number\n", number);
     } else {
